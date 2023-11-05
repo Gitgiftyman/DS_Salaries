@@ -1,0 +1,41 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+\documentclass[]{Wits}
+\usepackage{graphicx,subfigure,epsfig}
+\usepackage[centertags]{amsmath}
+\usepackage{amsthm,amsfonts,amssymb,graphicx}
+\usepackage{newlfont,bezier,styles/witsthesis,styles/wits}
+\usepackage{subeqnarray}
+\usepackage{fontspec}
+
+\input{content/personalize}
+%%% Please edit the details in the above file.
+
+\input{fonts/fonts}
+\input{content/frontmatter/symbols}
+\begin{document}
+\begin{preamble}
+\maketitle
+\include{content/frontmatter/acknowledgements}
+\include{content/frontmatter/abstract}
+\include{content/frontmatter/dedication}
+% where does the dedication go?
+ \tableofcontents
+ \listoffigures
+ \listoftables
+ \listofsymbols
+\end{preamble}
+%%%%%%%%%%%%%%%%%%%% Main Body %%%%%%%%%%%%%%%%%%%%
+\include{content/chapters/chapter1}
+\include{content/chapters/chapter2}
+%\include{content/chapters/chapter3}
+%\include{content/chapters/chapter4}
+%\include{content/chapters/chapter5}
+
+\bibliographystyle{unsrt}
+\bibliography{content/references}
+
+\appendix
+\include{content/chapters/appendixA}
+
+\end{document}
